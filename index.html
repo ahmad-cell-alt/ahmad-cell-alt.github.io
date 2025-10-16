@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FutureTech Solutions</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 15px;
+    }
+    nav ul li {
+      margin: 0 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #0077ff;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #005fcc;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') center/cover no-repeat;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    header p {
+      font-size: 1.3rem;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    /* About Section */
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    #about {
+      text-align: center;
+    }
+    #about h2 {
+      color: #0077ff;
+      margin-bottom: 15px;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: #eef4ff;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 60px;
+      padding: 50px 20px;
+    }
+    #contact h2 {
+      color: #0077ff;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+    }
+    input, textarea {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #0077ff;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #005fcc;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header id="home">
+    <h1>FutureTech Solutions</h1>
+    <p>Innovating the Future Through Technology</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      At FutureTech Solutions, we design and develop digital products that help
+      businesses stay ahead in the fast-changing tech world. From modern websites
+      to smart automation systems, our mission is to create technology that
+      empowers and inspires.  
+      <br><br>
+      Our team is made up of passionate engineers and designers dedicated to 
+      delivering quality, innovation, and excellent user experiences.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Fill out the form below or contact us directly.</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top: 20px;">📧 Email: info@futuretech.com | ☎️ +1 (555) 123-4567</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 FutureTech Solutions. All rights reserved.
+  </footer>
+
+  <!-- Simple JS for smooth nav effect -->
+  <script>
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
